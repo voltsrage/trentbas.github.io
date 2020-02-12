@@ -1,5 +1,8 @@
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
+body{
+    overflow-x: hidden;
+}
 
 a:hover{
     text-decoration: none;
@@ -699,6 +702,8 @@ a:hover{
 
 /***** TEAM END ******/
 
+/***** SERVICES START ******/
+
 .services{
     background-image: url(..//images/interior-of-office-building-3252291.jpg);    
     padding-top: 200px;
@@ -743,4 +748,399 @@ a:hover{
     color: #333;
 }
 
+/***** SERVICES END ******/
 
+/***** PORTFOLIO START ******/
+#portfolio{
+    text-align: center;
+    font-family: 'Roboto Condensed',sans-serif;
+    color: #535353;
+    padding-top: 50px;
+    overflow-x: hidden;
+}
+
+#portfolio h5{
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #ff1737;
+    font-family: 'Oswald',sans-serif;
+    text-transform: uppercase;
+}
+
+#portfolio h2{
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    font-weight: 599;
+    color: #18191d;
+    line-height: 1.2;
+    max-width: 650px;
+    margin: 0 auto 1.5rem;
+    font-family: 'Oswald',sans-serif;
+}
+
+#portfolio p.desc{
+    max-width: 950px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    font-family: 'Roboto Condensed',sans-serif;
+}
+
+#portfolio .cbp-filter-style:after{
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background: #f1c307;
+    position: relative;
+    left: 12px;
+    top: -2.5px;
+    transform: rotate(45deg);
+}
+
+#portfolio .cbp-l-filters-alignCenter .cbp-filter-item .cbp-filter-item-active{
+    color: #f1c307;
+}
+
+#portfolio .cbp-filters-alignCenter .cbp-filter-counter{
+    background-color: #f1c307;
+}
+
+#portfolio .cbp-l-filters-alignCenter .cbp-filter-counter{
+    background-color: #f1c307;
+}
+
+#portfolio .cbp-l-filters-alignCenter .cbp-filter-counter:after{
+    border-top: 4px solid #f1c307;
+}
+
+#portfolio .cbp-l-filters-alignCenter .cbp-filter-item{
+    color: #18191d;
+    font-family: 'Oswald',sans-serif;
+    font-size: 15px;
+    margin: 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#portfolio .cbp-caption-zoom .cbp-caption-activeWrap{
+    opacity: 0;
+    top:5%;
+    left: 5%;
+    bottom: 5%;
+    visibility: hidden;
+    z-index: 1;
+    background: rgba(255,255,255,0.88);
+    transition: all 0.4s cubic-bezier(0.57,0.21,1.25);
+}
+
+#portfolio .cbp-caption-active .cbp-caption-activeWrap{
+    background: rgba(255,255,255,0.88);
+    width: 0;
+    position: absolute;
+    z-index: 1;
+    height: 90%;
+}
+
+#portfolio .cbp-item:hover .cbp-caption-activeWrap{
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    transition: all 0.4s cubic-bezier(0.57,0.21,1.25);
+}
+
+/***** PORTFOLIO END ******/
+
+/***** NUMBERS START ******/
+
+.numbers{   
+    background-image: url(..//images/bg-testimonials.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding-top: 140px;
+    padding-bottom: 150px;
+    font-family: 'Oswald',sans-serif;
+}
+
+.color-fff{
+    color: white;
+}
+
+.fs-35{
+    font-size: 70px;
+}
+
+.fw-700{
+    font-weight: bold;
+}
+
+.color-aaa{
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: white !important;
+    letter-spacing: 2px;
+}
+
+.numbers .fa{
+    font-size: 70px;
+}
+
+/***** NUMBERS END ******/
+
+.price-item{
+    border-radius: 10px 10px 10px 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px 0px rgba(221,221,221,0.9);
+    transition: background 0.3s,border 0.3s border-radius 0.3s,box-shadow 0.3s;
+    text-align: center;
+    margin: 20px;
+    padding: 70px 50px;
+    width: 100%;
+    position: relative;
+}
+
+.section_subtitle{
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #ff1737;
+    font-family: 'Oswald',sans-serif;
+    text-transform: uppercase;
+}
+
+.pricing-action{
+    
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 25px;
+    border: 2px solid black;
+    border-radius: 10px;
+    border-color: blue;
+    
+}
+
+.pricing-action:hover{
+    box-shadow: 0px 0px 40px 0px rgba(221,221,221,1);
+}
+
+.pricing-price{
+    margin-bottom: 20px;
+}
+
+.pricing-action .pricing-price h2,
+.pricing-action ul.pricing-features li,
+.pricing-action .pricing-price span{
+    color:#dddddd;
+}
+
+.pricing-price h2{
+    color: #4c4c4c;
+    font-size: 65px;
+}
+
+.pricing-price span{
+    color: #4c4c4c;
+    font-size: 17px;
+    display: block;
+    text-transform: uppercase;
+}
+
+.pricing_divider{
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.pricing_divider span{
+    border-top: 3px solid #4c4c4c;
+    width: 20%;
+    display: block;
+    margin: 0 auto;
+}
+
+ul.pricing-feature{
+    text-align: center;
+    
+}
+
+ul.pricing-feature li{
+    padding-top: 8px 0;
+    font-size: 16px;
+    line-height: 30px;
+    color: #999;
+}
+
+ul.pricing-feature li .sql-queries{
+    width: 16px;
+}
+
+ul.pricing-feature li .feature-list{
+    padding-left: 15px;
+}
+
+
+.pricing-active{
+    background-color: #222;
+}
+
+
+/***** CLIENTS START ******/
+
+#clients-list{
+    padding: 45px 0 0 0;
+    margin-left: 115px;
+}
+
+.client{
+    padding: 0 10px;
+    max-width: 170px;
+    margin: 0 auto;
+    line-height: 100px;
+}
+
+.client img{
+    display: inline-block !important;
+}
+
+#clients h6{
+    font-size: 20px;
+    font-family: 'Oswald',sans-serif;
+}
+
+#clients h2{
+    font-size: 34px;
+    font-family: 'Oswald',sans-serif;
+    text-transform: uppercase;
+}
+
+/***** CLIENTS END ******/
+
+/***** FOOTER START ******/
+
+footer{
+    background-color: #1c1c1d;
+    padding-top: 30px;
+    border-top: 5px solid rgba(0,0,0,0.1);
+}
+
+#contact-left h2,
+#contact-right h3{
+    color: white !important;
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-family: 'Roboto Condensed',sans-serif;
+    text-transform: uppercase;
+}
+
+#contact-left p{
+    color: white;
+    margin-bottom: 30px;
+    font-family: 'Roboto Condensed',sans-serif;
+}
+
+#contact-info{
+    background-image: url(..//images/world-map.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+address{
+    color: white;
+    font-family: 'Roboto Condensed',sans-serif;
+}
+
+address strong{
+    font-size: 17px;
+}
+
+form .form-control{
+    background: transparent;
+    border-radius: 0;
+    border-color: white;
+    font-size: 17px;
+    font-weight: 300;
+    padding: 8px 17px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#footer-bottom{
+    background-color: rgba(0,0,0,0.1);
+    padding: 30px 0;
+    margin-top: 59px;
+}
+
+#footer-copyrights p{
+    margin: 0;
+    color: white !important;
+}
+
+#footer-menu{
+    float: left;
+    color: white !important;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+#footer-menu ul{
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+#footer-menu ul li{
+    display: inline-block;
+}
+
+#footer-menu a{
+    color: white;
+    font-size: 17px;
+    font-weight: 300;
+    margin: 0 10px;
+    text-decoration: none;
+    font-family: 'Roboto Condensed',sans-serif;
+    text-transform: uppercase;
+}
+
+#footer-menu a:hover{
+    color: orange;
+}
+
+ul.social-list{
+    display:flex;
+    color: white;
+}
+
+ul.social-list a{
+    margin-right: 10px;
+    color: white;
+}
+
+.btn-white{
+    border-color: white;
+    color: white;
+}
+
+.btn-white:hover{
+    border-color: white;
+    color: #fff;
+}
+
+.btn-general{
+    border-width: 2px;
+    border-radius: 0;
+    padding: 12px 25px;
+    font-size: 17px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed',sans-serif;    
+}
+
+#footer-copyrights p{
+    font-family: 'Roboto Condensed',sans-serif;
+    text-transform: uppercase;
+}

@@ -67,6 +67,37 @@ $(document).ready(function(){
         gallery:{
             enabled:true
         }
-    });
+    });   
+    
+    $('.count').counterUp({
+        delay:10,
+        time:1000
+    })
 
+});
+
+$(function(){
+
+    $("#clients-list").owlCarousel({
+        items:6,
+        autoplay:false,
+        smartSpeed:700,
+        loop:true,
+        autoPlayHoverPause:true,
+        nav:false,
+        dots:false,
+        responsive:{
+            0:{
+                items:2
+            },
+            400:{
+                items:400
+            },
+            768:{
+                items:6
+            }
+        }
+        
+    })  
+   
 });

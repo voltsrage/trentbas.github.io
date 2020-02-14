@@ -1,3 +1,285 @@
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body{
+    overflow-x: hidden;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    position: absolute;
+    transform: all 0.3s;
+    background: black;
+    z-index: 20;
+    top: 0px;
+    width: 100%;
+}
+
+.nav .logo a{
+    text-transform: uppercase;
+    font-size: 18px !important;
+}
+
+.nav ul{
+    display: flex;
+    justify-content: space-around;
+    width: 85%;
+}
+
+.nav ul li{
+    list-style: none;
+}
+
+.nav ul li a{
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding: 20px;
+    font-size: 14px;
+    color: white;   
+    font-family: 'Roboto Condensed',sans-serif;
+    text-transform: uppercase;
+}
+
+.nav-icon{
+    position: absolute;
+    top: 18px;
+    right: 30px;
+    padding: 5px;
+    width: 40px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.nav-icon span{
+    background-color: white;
+    width: 30px;
+    height: 1px;
+    display: block;
+    transition: 300ms linear all;
+}
+
+
+.nav-icon span:nth-child(1),
+.nav-icon span:nth-child(3)
+{
+    width: 20px;
+    margin: 0 auto;
+}
+
+.nav-icon span:nth-child(2){
+    margin: 5px 0;
+    width: 32px;
+}
+
+.nav-icon:hover span:nth-child(1),
+.nav-icon:hover span:nth-child(3)
+{
+    width: 30px;
+}
+
+.full-nav{
+    background: #f1c30f;    
+    color: #18191d;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    padding: 3.75rem;
+    z-index: 99;  
+    overflow-x: hidden;    
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: all .4s ease-in-out;
+}
+
+.full-nav.open{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: all .4s ease-in-out;
+    z-index: 99;
+}
+
+.full-nav .logo{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    
+}
+
+.full-nav .logo a{
+    color: black;   
+    font-size: 3rem;
+    font-family: 'Montserrat',sans-serif; 
+    font-weight: 600;
+ }
+ 
+ .nav2{
+    display: flex;
+    justify-content: center;
+}
+
+.nav2 ul{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 700px;
+}
+
+.nav2 ul li{
+    display: flex;
+    flex: 50%;
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-bottom: 10px solid #f1c30f;
+    border-right: 10px solid #f1c30f;
+    transition: all 0.5s;
+}
+
+.nav2 ul li a{
+    font-family: 'Roboto Condensed',sans-serif;
+    font-size: 1.4rem;
+    color: #18191d;
+}
+
+.nav2 ul li a span{
+    color: #b9b9b9;
+}
+
+.nav2 ul li:hover{
+    background-color: #ff1637;
+}
+
+.nav2 ul li:hover a,
+.nav2 ul li:hover a span{
+    color: white    ;
+}
+
+.social-icons a{
+    color: white;
+    border: 4px solid white;
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+    display: inherit;
+    text-align: center;
+    border-radius: 50px;
+    transition: all ease 1s;
+    margin-top: 10px;
+}
+
+.social-icons a:hover i{
+    color: #000;
+    margin-top: -10px;
+    border-color: #000;
+}
+
+.social-icons a:hover {
+    color: #000;
+    margin-top: -10px;
+    border-color: #000;
+}
+
+ul.social-icons.list-inline{
+    text-align: center;
+    margin-top: 22px;
+}
+
+.list-inline>li{
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.corner-circle{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120px;
+    height: 120px;
+    background-color: white;
+    border-radius: 0 0 0 120px;
+    z-index: 2;
+}
+
+.nav-close{
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.nav-close span{
+    background: #18191d;
+    width: 30px;
+    height: 1px;
+    display: block;
+    position: absolute;
+    top: 14px;    
+}
+
+.nav-close span:nth-child(1)
+{
+    transform: rotate(45deg);
+}
+
+.nav-close span:nth-child(2)
+{
+    transform: rotate(-45deg);
+}
+
+.nav.sticky{
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    box-shadow: 0 10px 10px -10px rbga(0,0,0,0.35);
+    animation-name: animationFade;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes animationFade{
+    from{
+        opacity: 0;
+        -webkit-transform: translate3d(0,-100%,0);
+        transform: translate3d(0,-100%,0);
+    }
+    to{
+        opacity: 1;
+        transform: none;
+        -webkit-transform: none;
+        -o-transform: none;
+    }
+}
+
+.nav.sticky a{
+    color: #18191d;
+}
+
+.nav.sticky ul li.logo{
+    display: inline-block;
+}
+
+.nav.sticky .nav-icon span{
+    background: #18191d;
+}
+
 
 video#herovideo{
     width: 100%;
@@ -24,7 +306,7 @@ video#herovideo{
 
 .vidContent{
     position: absolute;
-    top: 230px;
+    top: 210px;
     color: #f1f1f1;
     width: 50%;
     padding: 10px;
@@ -131,6 +413,10 @@ ul.social-icons.list-inline{
     font-size: 36px;
     font-weight: 600;
     color: #6c757d !important;
+}
+
+.carousel{
+    overflow-x: hidden;
 }
 
 p.lead{
@@ -902,7 +1188,9 @@ ul.social-list a{
 }
 
 @media screen and (max-width:1200px){  
-    
+    body{
+        overflow-x: hidden;
+    }
 
     .vidContent{
         position: absolute;
@@ -920,16 +1208,44 @@ ul.social-list a{
         text-transform: uppercase;
         letter-spacing: 2px;
     }
+
+    .nav .logo a{
+        font-size: 16px !important;
+    }
+       
+    .nav ul li a{
+        padding-right: 15px;
+        padding-left: 15px;
+        font-size: 14px;
+    }
     
 }
 
-@media screen and (max-width:1000px){    
+@media screen and (max-width:1000px){   
+    
+    body{
+        overflow-x: hidden;
+    }
+
     .nav3{
         display: none;
     }
+
+    .nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    
     .nav ul{
         
         width: 90%;
+        padding-left: 20px;
+    }
+
+    .nav ul li a{
+        padding-right: 5px;
+        padding-left: 5px;
+        font-size: 13px;
     }
 
     .vidContent{
@@ -952,6 +1268,9 @@ ul.social-list a{
 }
 
 @media screen and (max-width:900px){       
+    body{
+        overflow-x: hidden;
+    }
 
     .vidContent{
         position: absolute;
@@ -978,31 +1297,67 @@ ul.social-list a{
     }
 }
 
+@media screen and (max-width:900px){       
+    body{
+        overflow-x: hidden;
+    }
+
+    .vidContent{
+        position: absolute;
+        top: 120px;       
+        width: 40%;
+        padding: 10px;
+        text-align: left;
+    }
+    
+    .vidContent h1{
+        font-size: 1.5em;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }    
+}
+
 @media screen and (max-width:800px){    
+    body{
+        overflow-x: hidden;
+    }
     .nav{
         display: none;
     }   
 
     .nav3{
         display: flex;
+        justify-content: space-between;
+        padding-top: 15px;
+        padding-bottom: 20px;
+        position: absolute;
+        transform: all 0.3s;
+        background: black;
+        z-index: 20;
+        top: 0px;
+        width: 100%;
     }
 
-    .nav3 ul li{
+    .nav-links li{       
         list-style: none;
+        line-height: 40px;
     }
     
-    .nav3 ul li a{
+    .nav-links li a{        
         text-decoration: none;
         letter-spacing: 1px;
         font-size: 14px;
         color: white;
         font-family: 'Roboto Condensed',sans-serif;
         text-transform: uppercase;
-    }
-    
+        padding: 30px;
+       
+    }    
 
     .nav3 .logo2{
-       
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 5px;
         background-color: black;
         position: absolute;
         left: 0px;
@@ -1010,26 +1365,44 @@ ul.social-list a{
         width: 100%;
         height: 30px;
         padding-left: 40px;
-        padding-bottom: 20px;
+        
         border-bottom: 1px solid white;
     }
         
     .nav3 .logo2 a{
+        position: absolute;
+        top: 0;
+        left: 30px;
         text-transform: uppercase;
         font-size: 18px;
-        height: 10px;
-        color: white;     
+        height: 20px;
+        color: white;        
     }
-    .nav3 ul{        
+
+    .nav3 .burger{
+        position: absolute;
+        top: -5px;
+        right: 30px;
+    }
+    .nav-links{        
         position: absolute;
         left: 0px;
         top: 40px;
         display: flex;
         flex-direction: column;
         background-color: black;
-        width: 100%;
+        width: 100%;    
+        transition: transform 0.5s ease-in;
+        display: none;
     }
 
+    .burger{
+        cursor: pointer;
+    }
+
+    .nav-active{
+        display: flex;
+    }
 
     .nav3 .burger div{        
         width: 25px;
@@ -1038,14 +1411,19 @@ ul.social-list a{
         margin: 5px;;
     }
 
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+
     .vidContent{
         position: absolute;
-        top: 130px;       
+        top: 120px;       
         width: 40%;
         padding: 10px;
         text-align: left;
     }
-
     
     #vidBtn{
         font-size: 13px;
@@ -1053,5 +1431,148 @@ ul.social-list a{
         margin-top: 5px;
         border-radius: 50px;    
     }
+    
+    .vidContent h1{
+        font-size: 1em;
+        letter-spacing: 1px;
+    }
+    
+    .vidContent p{
+        font-size: 0.9em;
+    }
+    
+    
+}
 
+@media screen and (max-width:700px){    
+    body{
+        overflow-x: hidden;
+    }  
+
+    .vidContent{
+        position: absolute;
+        top: 90px;       
+        width: 40%;
+        padding: 10px;
+        text-align: left;
+    }    
+   
+    #vidBtn{
+        font-size: 11px;
+        padding: 5px 15px;      
+        margin-top: 5px;
+        border-radius: 40px;    
+    }
+    
+    .vidContent h1{
+        font-family: 'Oswald',sans-serif;
+        font-size: 0.9em;
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    .vidContent p{
+        font-size: 0.8em;
+    }
+  
+    
+}
+@media screen and (max-width:600px){    
+    body{
+        overflow-x: hidden;
+    }  
+
+    p.text-secondary{
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    #about-us .carousel-control-next{
+        right: -15px;
+    }
+    
+    #about-us .carousel-control-prev{
+        left: -15px;
+    }
+    
+
+    .vidContent{
+        position: absolute;
+        top: 60px;       
+        width: 40%;
+        padding: 5px;
+        text-align: left;
+    }  
+
+    #vidBtn{
+        font-size: 11px;
+        padding: 5px 15px;      
+        margin-top: -5px;
+        border-radius: 40px;    
+    }
+    
+    
+    .vidContent h1{
+        font-family: 'Oswald',sans-serif;
+        font-size: 0.8em;
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    .vidContent p{
+        font-size: 0.7em;
+    }
+     
+}
+
+@media screen and (max-width:500px){    
+    body{
+        overflow-x: hidden;
+    }  
+
+    .bx-wrapper .social-icons{
+        display: none;
+    }
+
+    .vidContent{
+        position: absolute;
+        top: 60px;       
+        width: 60%;
+        padding: 10px;
+        text-align: left;
+    }      
+     
+}
+
+@media screen and (max-width:450px){    
+    body{
+        overflow-x: hidden;
+    }   
+
+    .vidContent{
+        position: absolute;
+        top: 50px;       
+        width: 60%;
+        padding: 10px;
+        text-align: left;
+    }     
+}
+
+@media screen and (max-width:433px){    
+    body{
+        overflow-x: hidden;
+    }   
+
+    .vidContent{
+        position: absolute;
+        top: 40px;       
+        width: 60%;
+        padding: 10px;
+        text-align: left;
+    }     
 }

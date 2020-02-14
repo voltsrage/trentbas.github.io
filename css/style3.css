@@ -1480,6 +1480,21 @@ ul.social-list a{
         overflow-x: hidden;
     }  
 
+    p.text-secondary{
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    #about-us .carousel-control-next{
+        right: -15px;
+    }
+    
+    #about-us .carousel-control-prev{
+        left: -15px;
+    }
+    
+
     .vidContent{
         position: absolute;
         top: 60px;       
@@ -1528,4 +1543,18 @@ ul.social-list a{
         text-align: left;
     }      
      
+}
+
+@media screen and (max-width:450px){    
+    body{
+        overflow-x: hidden;
+    }   
+
+    .vidContent{
+        position: absolute;
+        top: 50px;       
+        width: 60%;
+        padding: 10px;
+        text-align: left;
+    }     
 }

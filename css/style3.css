@@ -13,55 +13,48 @@ html{
     font-size: 16px;
 }
 
-.header{
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    height: 105vh;
-    
-}
-
-.nav{ 
+.nav{
     display: flex;
-    justify-content: center;
-    padding-top: 12px;
-    padding-bottom: 3px;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 20px;
     position: absolute;
     transform: all 0.3s;
-    background: white;
+    background: black;
     z-index: 20;
     top: 0px;
     width: 100%;
 }
 
+.nav .logo a{
+    text-transform: uppercase;
+    font-size: 18px !important;
+}
+
 .nav ul{
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 85%;
 }
 
 .nav ul li{
-    display: flex;
+    list-style: none;
 }
 
 .nav ul li a{
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding: 20px;
+    font-size: 14px;
+    color: white;   
     font-family: 'Roboto Condensed',sans-serif;
-    font-size: 1.1rem;
-    color: #333;
-    padding: 0.25rem 0;
-    margin: 10px 1.8rem;
     text-transform: uppercase;
-}
-
-.nav ul li.logo a{
-    font-size: 1.3rem;
-    font-family: 'Oswald',sans-serif;
-    margin: 0 4rem;
 }
 
 .nav-icon{
     position: absolute;
-    top: 27px;
+    top: 18px;
     right: 30px;
     padding: 5px;
     width: 40px;
@@ -70,7 +63,7 @@ html{
 }
 
 .nav-icon span{
-    background-color: #333;
+    background-color: white;
     width: 30px;
     height: 1px;
     display: block;
@@ -105,7 +98,7 @@ html{
     height: 100%;
     width: 100%;
     padding: 3.75rem;
-    z-index: 99;    
+    z-index: 99;  
     overflow-x: hidden;    
     visibility: hidden;
     opacity: 0;
@@ -129,13 +122,13 @@ html{
 }
 
 .full-nav .logo a{
-   color: black;   
-   font-size: 3rem;
-   font-family: 'Montserrat',sans-serif; 
-   font-weight: 600;
-}
-
-.nav2{
+    color: black;   
+    font-size: 3rem;
+    font-family: 'Montserrat',sans-serif; 
+    font-weight: 600;
+ }
+ 
+ .nav2{
     display: flex;
     justify-content: center;
 }
@@ -287,6 +280,7 @@ ul.social-icons.list-inline{
     background: #18191d;
 }
 
+
 video#herovideo{
     width: 100%;
 }
@@ -312,7 +306,7 @@ video#herovideo{
 
 .vidContent{
     position: absolute;
-    top: 230px;
+    top: 210px;
     color: #f1f1f1;
     width: 50%;
     padding: 10px;
@@ -362,21 +356,6 @@ video#herovideo{
     text-decoration: none;
 }
 
-
-.social-icons a{
-    color: #333 !important;
-    border: 4px solid white;
-    width: 50px;
-    height: 50px;
-    line-height: 40px;
-    display: inherit;
-    text-align: center;
-    border-radius:50px;
-    transition: all ease 0.5s;
-    margin-top: 40px;
-    background: white !important;
-}
-
 ul.social-icons.list-inline{
     text-align: center;
     margin-top: 22px;
@@ -390,7 +369,7 @@ ul.social-icons.list-inline{
 
 .bx-pager .bx-default-pager{
     margin-top: 50px !important;
-}
+}   
 
 #about-us .carousel-indicators{
     position: static;
@@ -1192,16 +1171,361 @@ ul.social-list a{
     text-transform: uppercase;
 }
 
-@media(min-aspect-ratio:16/9){
-    .bg-video{
-        width: 100%;
-        height: auto;
+
+/***Media Queries***/
+@media screen and (max-width:4000px){    
+    .nav3{
+        display: none;
+    }
+    .nav ul{
+        
+        width: 85%;
     }
 }
 
-@media(max-aspect-ratio:16/9){
-    .bg-video{
-        width: auto;
-        height: 100%;
+@media screen and (max-width:1200px){  
+    body{
+        overflow-x: hidden;
     }
+
+    .vidContent{
+        position: absolute;
+        top: 180px;    
+        left: 50px;   
+        width: 40%;
+        padding: 10px;
+        text-align: left;
+    }
+    .vidContent h1{
+        font-family: 'Oswald',sans-serif;
+        font-size: 2.5em;
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .nav .logo a{
+        font-size: 16px !important;
+    }
+       
+    .nav ul li a{
+        padding-right: 15px;
+        padding-left: 15px;
+        font-size: 14px;
+    }
+    
+}
+
+@media screen and (max-width:1000px){   
+    
+    body{
+        overflow-x: hidden;
+    }
+
+    .nav3{
+        display: none;
+    }
+
+    .nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .nav ul{
+        
+        width: 90%;
+        padding-left: 20px;
+    }
+
+    .nav ul li a{
+        padding-right: 5px;
+        padding-left: 5px;
+        font-size: 13px;
+    }
+
+    .vidContent{
+        position: absolute;
+        top: 120px;    
+        left: 30px;   
+        width: 40%;
+        padding: 10px;
+        text-align: left;
+    }
+    .vidContent h1{
+        font-family: 'Oswald',sans-serif;
+        font-size: 2.5em;
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    
+}
+
+@media screen and (max-width:900px){       
+    body{
+        overflow-x: hidden;
+    }
+
+    .vidContent{
+        position: absolute;
+        top: 120px;       
+        width: 50%;
+        padding: 10px;
+        text-align: left;
+    }
+    
+    .vidContent h1{
+        font-family: 'Oswald',sans-serif;
+        font-size: 2em;
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+        
+    #vidBtn{        
+        font-size: 16px;
+        padding: 13px 30px;
+        margin-top: 18px;
+        border-radius: 50px;
+    }
+}
+
+@media screen and (max-width:900px){       
+    body{
+        overflow-x: hidden;
+    }
+
+    .vidContent{
+        position: absolute;
+        top: 120px;       
+        width: 40%;
+        padding: 10px;
+        text-align: left;
+    }
+    
+    .vidContent h1{
+        font-size: 1.5em;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }    
+}
+
+@media screen and (max-width:800px){    
+    body{
+        overflow-x: hidden;
+    }
+    .nav{
+        display: none;
+    }   
+
+    .nav3{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 15px;
+        padding-bottom: 20px;
+        position: absolute;
+        transform: all 0.3s;
+        background: black;
+        z-index: 20;
+        top: 0px;
+        width: 100%;
+    }
+
+    .nav-links li{       
+        list-style: none;
+        line-height: 40px;
+    }
+    
+    .nav-links li a{        
+        text-decoration: none;
+        letter-spacing: 1px;
+        font-size: 14px;
+        color: white;
+        font-family: 'Roboto Condensed',sans-serif;
+        text-transform: uppercase;
+        padding: 30px;
+       
+    }    
+
+    .nav3 .logo2{
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 5px;
+        background-color: black;
+        position: absolute;
+        left: 0px;
+        top: 10px;
+        width: 100%;
+        height: 30px;
+        padding-left: 40px;
+        
+        border-bottom: 1px solid white;
+    }
+        
+    .nav3 .logo2 a{
+        position: absolute;
+        top: 0;
+        left: 30px;
+        text-transform: uppercase;
+        font-size: 18px;
+        height: 20px;
+        color: white;        
+    }
+
+    .nav3 .burger{
+        position: absolute;
+        top: -5px;
+        right: 30px;
+    }
+    .nav-links{        
+        position: absolute;
+        left: 0px;
+        top: 40px;
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        width: 100%;    
+        transition: transform 0.5s ease-in;
+        display: none;
+    }
+
+    .burger{
+        cursor: pointer;
+    }
+
+    .nav-active{
+        display: flex;
+    }
+
+    .nav3 .burger div{        
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px;;
+    }
+
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+
+    .vidContent{
+        position: absolute;
+        top: 120px;       
+        width: 40%;
+        padding: 10px;
+        text-align: left;
+    }
+    
+    #vidBtn{
+        font-size: 13px;
+        padding: 10px 20px;      
+        margin-top: 5px;
+        border-radius: 50px;    
+    }
+    
+    .vidContent h1{
+        font-size: 1em;
+        letter-spacing: 1px;
+    }
+    
+    .vidContent p{
+        font-size: 0.9em;
+    }
+    
+    
+}
+
+@media screen and (max-width:700px){    
+    body{
+        overflow-x: hidden;
+    }  
+
+    .vidContent{
+        position: absolute;
+        top: 90px;       
+        width: 40%;
+        padding: 10px;
+        text-align: left;
+    }    
+   
+    #vidBtn{
+        font-size: 11px;
+        padding: 5px 15px;      
+        margin-top: 5px;
+        border-radius: 40px;    
+    }
+    
+    .vidContent h1{
+        font-family: 'Oswald',sans-serif;
+        font-size: 0.9em;
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    .vidContent p{
+        font-size: 0.8em;
+    }
+  
+    
+}
+@media screen and (max-width:600px){    
+    body{
+        overflow-x: hidden;
+    }  
+
+    .vidContent{
+        position: absolute;
+        top: 60px;       
+        width: 40%;
+        padding: 5px;
+        text-align: left;
+    }  
+
+    #vidBtn{
+        font-size: 11px;
+        padding: 5px 15px;      
+        margin-top: -5px;
+        border-radius: 40px;    
+    }
+    
+    
+    .vidContent h1{
+        font-family: 'Oswald',sans-serif;
+        font-size: 0.8em;
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    .vidContent p{
+        font-size: 0.7em;
+    }
+     
+}
+
+@media screen and (max-width:500px){    
+    body{
+        overflow-x: hidden;
+    }  
+
+    .bx-wrapper .social-icons{
+        display: none;
+    }
+
+    .vidContent{
+        position: absolute;
+        top: 60px;       
+        width: 60%;
+        padding: 10px;
+        text-align: left;
+    }      
+     
 }

@@ -27,6 +27,8 @@ $(document).ready(function(){
         minSlides:1,
         maxSlides:1,
         speed:1200,
+        responsive:true,
+        
     });
 
     
@@ -69,7 +71,7 @@ $(document).ready(function(){
         }
     });   
     
-    $('.count').counterUp({
+    $('.countdown').counterUp({
         delay:10,
         time:1000
     })
@@ -136,3 +138,31 @@ $(function(){
         $(this).find('.card-hover').css({'top':'100%'})
     });
 });
+
+const navSlide = () => {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    /*const navLinks = document.querySelectorAll('.nav-links li');*/
+
+    burger.addEventListener('click',function() {
+        nav.classList.toggle('nav-active')
+    });
+}
+
+navSlide();
+
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementsByClassName("nav3");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the na
+function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  }

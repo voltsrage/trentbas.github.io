@@ -28,6 +28,11 @@ $(document).ready(function(){
         maxSlides:1,
         speed:1200,
         responsive:true,
+        breakpoints:{
+            500:{
+                auto:true,
+            }
+        }
         
     });
 
@@ -114,9 +119,9 @@ $(function(){
         layoutMode: 'fitRows'
     });
 
-$('.carousel').carousel({
-touch: true // default
-});
+    $('.carousel').carousel({
+        touch: true // default
+        });
 
     $('ul.filters > li').on('click',function(e){
 
@@ -170,4 +175,3 @@ function myFunction() {
       navbar.classList.remove("sticky");
     }
   }
-

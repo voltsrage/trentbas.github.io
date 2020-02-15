@@ -267,9 +267,13 @@ ul.bxslider {
     transform: rotate(90deg);
   }  
 }
+
+@media screen and (max-width:500px){  
+  .bx-wrapper .bx-pager,
+  .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+      display: none;
 }
 
-
-
+}
 
 

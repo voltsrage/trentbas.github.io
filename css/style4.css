@@ -377,11 +377,16 @@ ul.social-icons.list-inline{
 }
 
 #about-us .carousel-indicators li{
-    background-color: black !important;
+    background-color: blue !important;
     color: black;
-    width: 12px;
-    height: 12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
     margin-left: 5px;
+}
+
+.controls-top a i{
+    margin-top: -10px;
 }
 
 .carousel-control-prev-icon{   
@@ -413,10 +418,6 @@ ul.social-icons.list-inline{
     font-size: 36px;
     font-weight: 600;
     color: #6c757d !important;
-}
-
-.carousel{
-    overflow-x: hidden;
 }
 
 p.lead{
@@ -921,18 +922,6 @@ h4.title{
 
 /***** NUMBERS END ******/
 
-.price-item{
-    border-radius: 10px 10px 10px 10px;
-    background-color: #ffffff;
-    box-shadow: 0px 0px 20px 0px rgba(221,221,221,0.9);
-    transition: background 0.3s,border 0.3s border-radius 0.3s,box-shadow 0.3s;
-    text-align: center;
-    margin: 20px;
-    padding: 70px 50px;
-    width: 100%;
-    position: relative;
-}
-
 .section_subtitle{
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
@@ -941,81 +930,143 @@ h4.title{
     text-transform: uppercase;
 }
 
-.pricing-action{
-    
-    display: inline-block;
-    margin-top: 30px;
-    padding: 10px 25px;
-    border: 2px solid black;
-    border-radius: 10px;
-    border-color: blue;
-    
-}
-
-.pricing-action:hover{
-    box-shadow: 0px 0px 40px 0px rgba(221,221,221,1);
-}
-
-.pricing-price{
-    margin-bottom: 20px;
-}
-
-.pricing-action .pricing-price h2,
-.pricing-action ul.pricing-features li,
-.pricing-action .pricing-price span{
-    color:#dddddd;
-}
-
-.pricing-price h2{
-    color: #4c4c4c;
-    font-size: 65px;
-}
-
-.pricing-price span{
-    color: #4c4c4c;
-    font-size: 17px;
-    display: block;
+.section_main_title{
+    font-size: 2.3rem;
     text-transform: uppercase;
+    font-weight: 599;
+    color: #18191d;
+    line-height: 1.2;
+    max-width: 650px;
+    margin: 0 auto 1.5rem;
+    font-family: 'Oswald',sans-serif;
 }
 
-.pricing_divider{
-    text-align: center;
-    padding-top: 25px;
-    padding-bottom: 25px;
+#price .contain{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 3%;
+    margin-bottom: 0.1%;
 }
 
-.pricing_divider span{
-    border-top: 3px solid #4c4c4c;
-    width: 20%;
+#price .contain .pricing-table{
     display: block;
-    margin: 0 auto;
+    padding: 20px;
+    background: #ccc;
+    overflow: hidden;
+    width: 300px;
+    margin: 10px;
+    border-radius: 3px;
+    box-shadow: 0px 8px 15px rgba(0,0,0.2);
+    transform: scale(1);
+    transition: all 600ms cubic-bezier(0.68,-0.55,0.265,1.55);
 }
 
-ul.pricing-feature{
+#price .contain .pricing-table:nth-child(1){
+    background-image: linear-gradient(135deg,#fccf31 10%,#f55555 100%);
+}
+
+#price .contain .pricing-table:nth-child(2){
+    background-image: linear-gradient(135deg,#f761a1 10%,#8c1bab 100%);
+}
+
+#price .contain .pricing-table:nth-child(3){
+    background-image: linear-gradient(135deg,#43cbff 10%,#9708cc 100%);
+}
+
+#price .contain .pricing-table:hover{
+    transform: scale(1.2);    
+    z-index: 100;
+}
+
+.pricing-table .icon{
+    display: block;
+    width: 70px;
+    height: 70px;
+    background: white;
     text-align: center;
-    
+    line-height: 70px;
+    font-size: 2.2em;
+    margin: 20px auto;
+    border-radius: 50px;
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.2);
 }
 
-ul.pricing-feature li{
-    padding-top: 8px 0;
-    font-size: 16px;
+.pricing-table .icon span{
+    transform: scale(1);
+    transition: all 600ms cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+
+.pricing-table .type-01{
+    color: #fccf31;
+}
+
+.pricing-table .type-02{
+    color: #f761a1;
+}
+
+.pricing-table .type-03{
+    color: #43cbff;    
+}
+
+
+.pricing-table .heading{
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 500;
+    padding: 10px;
+    font-size: 1.5em;
+    font-family: 'Roboto Condensed',sans-serif;
+}
+
+.service-price{
+    color: white;
+    text-align: center;
+    font-size: 3em;
+}
+
+.service-price .dollar-sign{
+    font-size: 0.6em;
+    margin-left: -10px;
+}
+
+.pricing-feature{
+    list-style: none;
+    display: block;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.pricing-feature li{
+    color: white;
+    text-align: center;
+    display: block;
+    text-transform: capitalize;
+    font-family: 'Oswald',sans-serif;
+    font-size: 1em;
     line-height: 30px;
-    color: #999;
 }
 
-ul.pricing-feature li .sql-queries{
-    width: 16px;
+.order-button{
+    border: none;
+    display: block;
+    width: 70%;
+    height: 40px;
+    margin: 5px auto;
+    border-radius: 50px;
+    box-shadow: 0px 8px 15px rgba(0,0,0,0.2);
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: capitalize;
+    color: rgba(0,0,0,0.5);
+    background: white;
+    cursor: pointer;
 }
 
-ul.pricing-feature li .feature-list{
-    padding-left: 15px;
+.order-button:focus{
+    outline: none;
 }
-
-
-.pricing-active{
-    background-color: #222;
-}
-
 
 /***** CLIENTS START ******/
 
@@ -1501,6 +1552,46 @@ ul.social-list a{
 
     .vidContent{
         position: absolute;
+        top: 80px;       
+        width: 40%;
+        padding: 5px;
+        text-align: left;
+    }  
+
+    #vidBtn{
+        font-size: 11px;
+        padding: 5px 15px;      
+        margin-top: -5px;
+        border-radius: 40px;    
+    }
+    
+    
+    .vidContent h1{
+        font-family: 'Oswald',sans-serif;
+        font-size: 0.9em;
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    .vidContent p{
+        font-size: 0.8em;
+    }
+     
+}
+
+@media screen and (max-width:553px){    
+    body{
+        overflow-x: hidden;
+    }  
+
+    .bx-wrapper .social-icons{
+        display: none;
+    }
+
+    .vidContent{
+        position: absolute;
         top: 60px;       
         width: 40%;
         padding: 5px;
@@ -1541,11 +1632,19 @@ ul.social-list a{
 
     .vidContent{
         position: absolute;
-        top: 60px;       
+        top: 80px;       
         width: 60%;
         padding: 10px;
         text-align: left;
     }      
+
+    #about-us .carousel-control-next{          
+        display: none;
+    }
+    
+    #about-us .carousel-control-prev{
+        display: none;
+    }
      
 }
 
@@ -1556,21 +1655,7 @@ ul.social-list a{
 
     .vidContent{
         position: absolute;
-        top: 50px;       
-        width: 60%;
-        padding: 10px;
-        text-align: left;
-    }     
-}
-
-@media screen and (max-width:433px){    
-    body{
-        overflow-x: hidden;
-    }   
-
-    .vidContent{
-        position: absolute;
-        top: 40px;       
+        top: 70px;       
         width: 60%;
         padding: 10px;
         text-align: left;

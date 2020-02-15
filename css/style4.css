@@ -639,6 +639,14 @@ a:hover{
     width: 80% !important;
 }
 
+.w-75{
+    width: 75% !important;
+}
+
+.w-70{
+    width: 70% !important;
+}
+
 .team-member-slider{
     padding-bottom: 165px;
 }
@@ -648,16 +656,30 @@ a:hover{
     background-image: none;
 }
 
-.slider-arrows{
+.slider-arrows-prev{
     border-radius: 50px;   
-    background:#f1c30f;    
+    background-image: url(..//images/left-arrow.svg);  
+    background-size:50px 50px;   
     font-weight: bold;
     width: 45px;
     height: 45px;
     line-height: 40px;
     transition: 1s;
     color: white;
-    border: 4px solid #f1c30f;;
+    border: 4px solid #f1c30f;
+}
+
+.slider-arrows-next{
+    border-radius: 50px;   
+    background-image: url(..//images/right-arrow.svg);  
+    background-size:50px 50px;
+    font-weight: bold;
+    width: 45px;
+    height: 45px;
+    line-height: 40px;
+    transition: 1s;
+    color: white;
+    border: 4px solid #f1c30f;  
 }
 
 

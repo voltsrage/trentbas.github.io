@@ -1686,3 +1686,28 @@ ul.social-list a{
     
     
 }
+
+@media screen and (max-width:350px){    
+    body{
+        overflow-x: hidden;
+    }  
+
+   
+
+    .vidContent{
+        position: absolute;
+        top: 40px;       
+        width: 60%;
+        padding: 5px;
+        text-align: left;
+    }  
+
+    #vidBtn{
+        font-size: 11px;
+        padding: 5px 15px;      
+        margin-top: -1px;
+        border-radius: 40px;    
+    }
+    
+    
+}

@@ -114,6 +114,10 @@ $(function(){
         layoutMode: 'fitRows'
     });
 
+$('.carousel').carousel({
+touch: true // default
+});
+
     $('ul.filters > li').on('click',function(e){
 
         e.preventDefault();
@@ -166,3 +170,4 @@ function myFunction() {
       navbar.classList.remove("sticky");
     }
   }
+
